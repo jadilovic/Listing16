@@ -13,8 +13,8 @@ class Person{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + getId();
+		result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
 		return result;
 	}
 
@@ -27,24 +27,24 @@ class Person{
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		if (id != other.id)
+		if (getId() != other.getId())
 			return false;
-		if (name == null) {
-			if (other.name != null)
+		if (getName() == null) {
+			if (other.getName() != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!getName().equals(other.getName()))
 			return false;
 		return true;
 	}
 
 	public Person(int id, String name){
-		this.id = id;
-		this.name = name;
+		this.setId(id);
+		this.setName(name);
 	}
 	
 	@Override
 	public String toString(){
-		return "ID is " + id + " and name is " + name; 
+		return "ID is " + getId() + " and name is " + getName(); 
 	}
 }
 
