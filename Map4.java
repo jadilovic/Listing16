@@ -18,6 +18,16 @@ class Person{
 		return result;
 	}
 
+	private Object getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+
+	private int getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -42,6 +52,15 @@ class Person{
 		this.setName(name);
 	}
 	
+	private void setName(String name2) {
+		name = name2;
+		
+	}
+
+	private void setId(int id2) {
+		id = id2;
+	}
+
 	@Override
 	public String toString(){
 		return "ID is " + getId() + " and name is " + getName(); 
